@@ -1,0 +1,70 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <title>jQuery Magnifier</title>
+
+        <link rel="stylesheet" type="text/css" href="css/main.css" media="screen">
+        <link rel="stylesheet" type="text/css" href="javascript/jquery.magnifier/css/jquery.magnifier.css" media="screen">
+    </head>
+    <body>
+        <div id="header">
+            <h1>jQuery <em>Magnifier</em> Plugin</h1>
+        </div>
+        <div id="content">
+            <h2>What?</h2>
+            <p>
+                A small plugin to magnify images when you hover over them.
+            </p>
+            <a href="images/nw-boat_l.jpg" rel="magnify"><img src="images/nw-boat_sm.jpg" alt="" width="500" height="335"></a>
+            <h2>How?</h2>
+            <p>
+                You need 2 images, a small one used to hover, and a large one to which you link.</p>
+            <pre>
+<code>&lt;a href="images/large.jpg" rel="magnify"&gt;
+	&lt;img src="images/small.jpg alt="My small image" width="500" height="335"&gt;
+&lt;/a&gt;</code></pre>
+            <p>
+                On the link you put a rel-attribute with the value of &#8220;magnify&#8221;.
+                <br>
+                (Or a with a certain css classname if you don't like abusing rel-attributes.)
+            </p>
+            <p>
+                You then ignite the plugin like this:
+            </p>
+            <pre>
+<code>jQuery(function($) 
+{
+	$('a[rel*="magnify"]').magnify();
+});</code></pre>
+            <p>
+                There's a few options you can define in the magnify() function:
+            </p>
+            <pre>
+<code>jQuery(function($) 
+{
+	$('a[rel*="magnify"]').magnify(
+	{
+		lensWidth: 160, // width of the lens
+		lensHeight: 160, // height of the lens
+		link: true // clicking in the lens goes to the large image
+		delay: 500 // time to wait before the lens is shown
+	});
+});</code></pre>
+            <p>
+                To change the look and feel of the lens, sensor or preloader, open up jquery.magnifier/css/jquery.magnifier.css and do your thing.
+            </p>
+            <h2>Feedback</h2>
+            <p>
+                Please send all feedback to <a href="mailto:jquery-magnifier@dio5.com"><em>jquery-magnifier@dio5.com</em></a>.
+            </p>
+            <p>
+                Note that if you got the plugin working, but need special features or want to use it for purposes that it's currently
+                not intended for, I may not able to help, mostly because of lack of time. Please feel free to fork and improve!
+            </p>
+        </div>
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+        <script type="text/javascript" src="javascript/jquery.magnifier/javascript/jquery.magnifier.js"></script>
+        <script type="text/javascript" src="javascript/init.js"></script>
+    </body>
+</html>

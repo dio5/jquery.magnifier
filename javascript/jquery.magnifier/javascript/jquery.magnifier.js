@@ -1,7 +1,5 @@
 /**
  * jQuery Magnifier Plugin
- * 
- * @version 0.2
  * @author Dieter Orens dieter@dio5.com
  * 
  * @option Number lensWidth -  width of the lens 

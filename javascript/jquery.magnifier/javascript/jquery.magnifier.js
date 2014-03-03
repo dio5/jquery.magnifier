@@ -160,6 +160,11 @@
                         .mouseout(function(e){
                             magnifier.handleMouseOut(e);
                         });
+                        magnifier.$img.mouseenter(function(e){
+                        	magnifier.$sensor.css({
+                        		display: 'block'
+                        	});
+                        });
                     },
 										
                     handleMouseMove:function(e)
@@ -217,6 +222,9 @@
                         magnifier.$lens.css({
                             visibility: 'hidden',
                             display: 'none'
+                        });
+                        magnifier.$sensor.css({
+                        	display: 'none'
                         });
                     }
                 };
